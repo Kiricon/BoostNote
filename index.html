@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+  <link rel="shortcut icon" href="http://dev.boostnote.net/img/heart.png" type="image/png" />
+  <link rel="stylesheet" type="text/css" href="http://dev.boostnote.net/css/notes.css">
+  <link rel="stylesheet" type="text/css" href="http://dev.boostnote.net/css/colorize.css">
+  <link rel="stylesheet" type="text/css" href="http://dev.boostnote.net/css/theme.css">
+  <link rel="stylesheet" type="text/css" href="http://dev.boostnote.net/css/navigation.css">
+  <link rel="stylesheet" type="text/css" href="http://dev.boostnote.net/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="http://dev.boostnote.net/css/support.css">
+  <link rel="stylesheet" type="text/css" href="http://dev.boostnote.net/css/jquery.tagit.css">
+  <link rel="stylesheet" type="text/css" href="http://dev.boostnote.net/css/tagit.ui-zendesk.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://dev.boostnote.net/js/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="http://dev.boostnote.net/js/fancybox/jquery.fancybox.js"></script>
+    <script src="http://dev.boostnote.net/js/jquery.Jcrop.min.js"></script>
+    <link rel="stylesheet" href="http://dev.boostnote.net/css/jquery.Jcrop.min.css" type="text/css" />
+  <script src="http://dev.boostnote.net/js/tag-it.min.js"></script>
+  <script src="http://dev.boostnote.net/js/tagitsettings.js"></script>
+</head>
+<body>
+<div class="header">
+<!-- USER STATUS -->
+<div class="status">
+</div>
+<!-- LOG IN AND REGISTER -->
+        <ul id="dropdown">
+            <li id="settingsbutton">
+                <img id="gearicon" src="img/whitegear.png" style="height: 20px; width: 20px;" />
+                <ul>
+                    <li id="accsettings">Account Settings</a></li>
+                    <li id="about">About</li>
+                    <li id="logout">Logout</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="support"><img src="img/whiteplus.png" ></div>
+        <div class="friends"><img src="img/friendsbutton.png" ></div>
+<div class="navigation">
+        <div id="wall" class="navitem wall"></div>
+        <div class="navitem my"><div id="selectdiv" style="width: 100%; height: 3px; background: #00c4d4; margin-top: 54px;"></div></div>
+        <div class="navitem popular"></div>
+</div>
+</div>
+<!-- MAIN CONTENT kd-->
+<content id="maincontent">
+<div class="makenote">
+<form id="noteForm" enctype="multipart/form-data">
+<!--<paper-input name="title" id="titleinput" label="Title..."></paper-input>-->
+<input id="titleinput" type="text" name="title" placeholder="Title"><br>
+<textarea id="notedescription" name="note" placeholder="Note"></textarea><br>
+    <input name="tags" id="mySingleField" value=" " style="display:none;">
+    <div id="tagsymbol"></div>
+    <ul id="singleFieldTags"></ul>
+    <input type="submit" style="display:none"/>
+<div class="imagehere"></div>
+<div id="tray" style="height: 40px;">
+    <div><button id="private" value="0"></button></div>
+    <input id="insertimage" value="none" style="display:none; ">
+    <input id="originalimage" value="none" style="display:none;">
+    <button class="imageupload"><input name="file" type="file" class="inputFile" accept="image/x-png, image/gif, image/jpeg,  video/webm"></button>
+
+    <div id="notesubmit" class="raisedbutton"><span>Submit</span></div>
+</div>
+</form>
+</div>
+
+<!-- USERS NOTES -->
+<div class="notes">
+    <img class="hexigon" src="img/hexagone.png" style="margin: 10px auto; width: 100px;">
+    <h1 style="">Loading Notes...</h1>
+</div>
+</content>
+<!-- FOOTER -->
+<footer>
+
+    <script type="text/javascript" src="/js/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="/js/settings.js"></script>
+    <script type="text/javascript" src="/js/support.js"></script>
+    <script type="text/javascript" src="/js/api.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+</footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://www.growinglove.net/productiveme/js/jquery.Jcrop.min.js"></script>
+<link rel="stylesheet" href="http://www.growinglove.net/productiveme/css/jquery.Jcrop.min.css" type="text/css" />
+</head>
+<body>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#formsubmit").click(function () {
+
+            var iframe = $('<iframe name="postiframe" id="postiframe" style="display: none" />');
+
+            $("body").append(iframe);
+
+            var form = $('#theuploadform');
+            form.attr("action", "http://www.growinglove.net/productiveme/api/upload");
+            form.attr("method", "post");
+
+            form.attr("encoding", "multipart/form-data");
+            form.attr("enctype", "multipart/form-data");
+
+            form.attr("target", "postiframe");
+            form.attr("file", $('#userfile').val());
+            form.submit();
+
+            $("#postiframe").load(function () {
+                var iframeSrc = this.contentWindow.document.body.innerHTML;
+                var iframeContents = '<img src="'+iframeSrc+'"/>';
+                $("#textarea").html(iframeContents);
+            });
+
+            return false; 
+
+        });
+
+    });
+
+</script>
+
+<form id="theuploadform">
+    <input id="userfile" name="file" type="file" />
+    <input id="formsubmit" type="submit" value="Send File" />
+</form>
+
+<div id="textarea">
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+.header {
+    opacity: 0.98;
+    position: fixed;
+    z-index: 1;
+    color: #d3d3d3;
+    height: 58px;
+    /* overflow: hidden; */
+    /* background-color: rgb(255, 201, 78); */
+    background-color: #202020 /*#282c35*/;
+    width: 100%;
+    -webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    /* background: url('http://crispme.com/wp-content/uploads/2014/07/Ana%C3%ABl-Joly-2-840x560.jpg?pass') fixed; */
+    background: #d8d8d8;
+    background-size: 100% 100%;
+    margin: 0 0 !important;
+    padding: 0px 0px !important;
+    font: 12px/1.5 Helvetica,Arial,Verdana,sans-serif;
+    transition: opacity ease-in 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    height: 100%;
+}
+#backbutton {
+    height: 50px;
+    width: 50px;
+    margin: 4px 20px;
+    background: url("http://growinglove.net/productiveme/img/backbutton.png") no-repeat center;
+    background-size: 40px 40px;
+    float: left;
+}
+
+.note {
+    margin-top: 80px;
+    max-width: 30%;
+    max-height: 80%;
+    text-align: center;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255,.7);
+    word-wrap: break-word;
+    -webkit-transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
+    -ms-transition: all ease 0.2s;
+    transition: all ease 0.2s;
+    -webkit-animation: fadein 1s;
+    animation: fadein 1s;
+    webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    border-radius: 2px;
+    border-top-right-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+    overflow: hidden;
+}
+.notetitle {
+    font-family: Raleway, sans-serif;
+    text-align: center;
+    font-size: 1.17em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.note img {
+    margin-top: 10px !important;
+    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.80);
+    width: 100%;
+    max-height: 100%;
+    padding: 0px !important;
+}
+
+.displaytags {
+    margin-left: 20px;
+    margin-bottom: 5px;
+    float: left;
+    font-weight: bold;
+    font-size: 12px;
+    opacity: 0.5;
+    word-break: break-word;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+#boostno, #noteboostnum {
+    margin-right: 20px;
+    margin-bottom: 5px;
+    float: right;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.note button {
+    opacity: 0.0;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.boost {
+    background: url('../img/whiteheart.png') center no-repeat;
+    background-size: 15px 15px;
+    width: 33px;
+    height: 33px;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    float: right;
+}

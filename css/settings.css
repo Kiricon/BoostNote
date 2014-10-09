@@ -1,0 +1,295 @@
+@keyframes settings-slide {
+    0% {padding:0px 0px 0px 200px; opacity: 0;}
+    100% {padding:0px 0px 0px 0px; opacity: 1;}
+}
+
+@-webkit-keyframes settings-slide {
+    0% {padding:0px 0px 0px 200px; opacity: 0;}
+    100% {padding:0px 0px 0px 0px; opacity: 1;}
+}
+
+@media (min-width: 790px){
+    #settingsContainer {
+        animation-name: settings-slide;
+        animation-duration: 1.5s;
+        -webkit-animation-name: settings-slide;
+        -webkit-animation-duration: 1.5s;
+    }
+}
+#settingsSection, #aboutSection {
+    width: 90%;
+    min-height: 300px;
+    background: #f5f5f5;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    overflow:hidden;
+}
+
+@media (min-width: 790px){
+    #settingsSection, #aboutSection {
+        width: 50%;
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+    }
+}
+
+#aboutSection {
+    padding: 20px;
+}
+
+#profilePicture {
+    text-align: left;
+}
+
+#profilePicture img {
+    border: solid white 5px;
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
+    background-color: #000000;
+    margin-left: 30px;
+    margin-top: 30px;
+    webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    width: 100px;
+    height: 100px;
+}
+
+#profilePicture img:hover {
+    background-color: black;
+    opacity: 0.7;
+}
+
+#profileUsername {
+    font-weight: bold;
+    float: left;
+    margin-left: 15px;
+    margin-top: 30px;
+    font-size: 30px;
+    color: #464646;
+    /*text-shadow: 3px 3px 3px rgba(0,0,0,0.75); */
+}
+
+#profileEmail {
+    clear:both;
+    float: left;
+    margin-left: 42px;
+    margin-top: 20px;
+    color: #464646;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.updateWallpaper {
+    background: #2059a0 !important;
+    margin-top: 0px !important;
+    width: 170px !important;
+}
+
+.removeWallpaper {
+    background: #a02a2a !important;
+    width: 170px !important;
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px !important;
+}
+
+.updatePassword {
+    background: #24781d !important;
+    width: 170px !important;
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px !important;
+}
+
+#updateWallpaper {
+    clear:both;
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.updateEmail {
+    background: #d07330 !important;
+    margin-top: 0px !important;
+    width: 170px !important;
+}
+
+.submitPasswordUpdate {
+    background: #d07330 !important;
+    margin-top: 20px;
+    width: 170px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnSubmit {
+    background: #d07330 !important;
+    margin-top: 20px;
+    width: 200px !important;
+}
+
+.inputEmail {
+    float: left;
+    margin-left: 20px;
+}
+
+.inputEmail input {
+    padding: 5px;
+}
+
+.inputPassword {
+    clear:both;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}
+
+.inputPassword input {
+    padding: 5px;
+    margin: 5px;
+    width: 30%;
+}
+
+.inputRed {border: 4px solid #c00;}
+.inputGreen {border: 4px solid #0c0;}
+.inputGray {border: 4px solid #aaa;}
+
+#profile {
+    clear: both;
+    padding-bottom: 10px;
+}
+
+/* Apply these styles only when #preview-pane has
+       been placed within the Jcrop widget */
+.jcrop-holder #preview-pane {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    top: 10px;
+    right: -100px;
+    padding: 6px;
+    border: 1px rgba(0,0,0,.4) solid;
+    background-color: white;
+
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+    -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* The Javascript code will set the aspect ratio of the crop
+   area based on the size of the thumbnail preview,
+   specified here */
+#preview-pane .preview-container {
+    width: 100px;
+    height:100px;
+    overflow: hidden;
+}
+
+.jcrop-holder img {
+    border: solid white 5px !important;
+    border-radius: 5px;
+}
+
+.jcrop-holder {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#target {
+    border: solid white 5px !important;
+    border-radius: 5px;
+    margin: 30px 0px;
+    /* height: 300px; */
+}
+
+#imageEdit{
+    background: url('../img/edit.png') no-repeat center;
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    margin-left: 110px;
+    margin-top: 110px;
+}
+
+.updateProfile {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px !important;
+}
+
+#SettingsSection {
+    padding: 20px;
+    width: 90%;
+    background: #f5f5f5;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+}
+
+@media (min-width: 790px){
+    #SettingsSection {
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+        width: 50%;
+    }
+}
+
+.settingsSelect {
+    font-size: 25px;
+    border-bottom: 1px solid #c5c5c5;
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+}
+.settingsSelect img {
+    height: 20px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.settingsSelect:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 790px){
+    #updateWallpaper div, .removeWallpaper, .updatePassword {
+        width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: inherit !important;
+        clear:both !important;
+    }
+    #updateWallpaper {
+        width: 100% !important;
+        float: inherit !important;
+        margin-left: inherit;
+    }
+    #updateWallpaper div {
+        margin-top: 20px;
+    }
+}

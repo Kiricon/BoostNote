@@ -1,0 +1,125 @@
+@keyframes slide-up {
+    0% {margin-top:200px; opacity: 0;}
+    100% {margin-top:0px; opacity: 1;}
+}
+
+@-webkit-keyframes slide-up {
+    0% {margin-top:200px; opacity: 0;}
+    100% {margin-top:0px; opacity: 1;}
+}
+
+@keyframes spin {
+     from {
+         transform: rotate(0deg);
+     }
+     to {
+         transform: rotate(-360deg);
+     }
+ }
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+#supporting {
+    background: white;
+    width: 90%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding:10px;
+}
+@media (min-width: 790px) {
+    #supporting {
+        webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+        box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+        -webkit-animation: slide-up 3s;-o-animation: slide-up 3s;animation: slide-up 3s;
+    }
+
+    #supporting .user a:hover, #supporting .user .deleteUser:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+    #supporting {
+        width: 50%;
+    }
+}
+
+#supporting .supportTitle {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#supporting .user {
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 230px;
+    height: 70px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #d4d4d4;
+    overflow: hidden;
+}
+
+#supporting .user span {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    position: absolute;
+}
+#supporting .user .proimg {
+    margin-top: 10px;
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: solid white 3px;
+    border-radius: 3px;
+    webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+}
+
+#supporting .user a {
+    float: left;
+    text-decoration: none;
+    overflow:hidden;
+    width: 90%;
+    text-align: left;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    overflow:hidden;
+}
+
+#supporting .deleteUser {
+    float: left;
+    height: 20px;
+    width: 20px;
+    margin-top: 30px;
+}
+
+.spin {
+    -webkit-animation-name:             spin;
+    -webkit-animation-duration:         0.5s;
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-transition-timing-function: linear;
+    animation-name:             spin;
+    animation-duration:         0.5s;
+    animation-iteration-count:  infinite;
+    transition-timing-function: linear;
+}

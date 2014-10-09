@@ -1,0 +1,223 @@
+@-webkit-keyframes expand {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes expand {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+.navigation {
+    width: 100%;
+    height: 57px;
+    margin: 0px auto;
+    background-color: #202020;
+    clear: both;
+    -webkit-backface-visibility:hidden;
+    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+}
+.navigation div {
+    top:0;
+    display:block;
+}
+@media (min-width: 790px) {
+    .navigation {
+        clear: inherit;
+        width: 400px;
+        left: auto;
+        top:0px !important;
+    }
+}
+@media (max-width: 790px){
+    .navigation {
+        left: 0px !important;
+        top: 57px;
+        position: fixed !important;
+    }
+}
+
+.navitem {
+    width: 33%;
+    height: 100%;
+    float: left;
+    cursor: pointer;
+
+}
+@media (min-width: 790px) {
+    .navitem:hover {
+        opacity: 0.9;
+        background-color: #555;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    #selectdiv {
+        -webkit-animation: expand 0.7s ;-o-animation: expand 0.7s ;animation: expand 0.7s ;
+    }
+
+    .navitem:active {
+        background-color: #006699;
+    }
+}
+
+.wall {
+    background: url('../img/whitegrid.png') center no-repeat;
+    background-size: auto 70%;
+    opacity: 0.7;
+}
+.wall #selectdiv {
+    float: left;
+}
+.my {
+    background: url('../img/whitehome.png') center no-repeat;
+    background-size: auto 70%;
+    opacity: 0.7;
+}
+.my #selectdiv {
+    margin-left: auto;
+    margin-right: auto;
+}
+.popular {
+    background: url('../img/whitetrophy.png') center no-repeat;
+    background-size: auto 70%;
+    opacity: 0.7;
+}
+.popular #selectdiv {
+    float: right;
+}
+
+#dropdown, #dropdown ul {
+    text-align: left;
+    display: inline;
+    margin: 0;
+   /*padding: 15px 4px 17px 0;*/
+   /* margin-right: 15px; */
+    list-style: none;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+#dropdown li, #dropdown ul li {
+    font: bold 12px/18px sans-serif;
+    display: inline-block;
+    margin-left: -4px;
+    position: relative;
+    padding: 15px 20px;
+   /* background: #fff; */
+    cursor: pointer;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+#dropdown li {
+    color: #fff;
+}
+#dropdown li:hover, #dropdown ul li:hover {
+    background: #555;
+    color: #fff;
+}
+#dropdown li ul {
+    padding: 0;
+    position: absolute;
+    top: 48px;
+    right: 0;
+    width: 150px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transiton: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -transition: opacity 0.2s;
+}
+#dropdown li ul li {
+    background: #555;
+    display: block;
+    color: #fff;
+    text-shadow: 0 -1px 0 #000;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+#dropdown li ul li:hover { background: #666; }
+@media (min-width: 790px){
+    #dropdown li:hover ul {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+#dropdown {
+    float: right;
+    padding-left: 0px !important;
+}
+
+#settingsbutton {
+    padding: 16px 20px !important;
+}
+@media (min-width: 790px) {
+    #settingsbutton {
+        margin-right: 15px;
+    }
+    .support {
+        padding: 16px 20px !important;
+    }
+    .friends {
+        padding: 16px 20px !important;
+    }
+}
+
+.support {
+    float: right;
+    padding: 16px 15px !important;
+    cursor: pointer;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.support:hover {
+    background: #556e55;
+}
+.support img {
+    height: 20px;
+    width: 20px;
+}
+
+.friends {
+    float:right;
+    padding: 16px 15px !important;
+    cursor: pointer;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.friends img {
+    height: 20px;
+    width: 20px;
+}
+.friends:hover {
+    background: #66634e;
+}

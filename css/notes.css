@@ -1,0 +1,347 @@
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadein {
+    from {opacity: 0.0;}
+    to {opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes fadein {
+    from {opacity: 0.0;}
+    to {opacity: 1;}
+}
+.notes {
+ clear: both;
+ text-align: center;
+ width: 94%;
+ /*display: table;*/
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 20px;
+-webkit-transition: all ease 0.3s;
+-moz-transition: all ease 0.3s;
+-o-transition: all ease 0.3s;
+-ms-transition: all ease 0.3s;
+transition: all ease 0.3s;
+ padding-bottom: 200px;
+}
+
+@media (min-width: 1800px) {
+  #titleinput {
+  width: 95% !important;
+}
+  #notedescription {
+  width: 95% !important;
+}
+}
+@media (min-width: 800px) and (max-width: 1799px) {
+  #titleinput {
+  width: 95% !important;
+}
+    #notedescription {
+  width: 95% !important;
+}
+}
+
+@media (min-width: 450px) and (max-width: 599px) {
+  .note {
+  margin: 5px;
+  width:100%;
+}
+  #titleinput {
+  width: 95% !important;
+}
+  #notedescription {
+  width: 95% !important; 
+}
+}
+.notetitle {
+    font-family: Raleway, sans-serif;
+    text-align:center;
+    font-size: 1.17em;
+    font-weight:bold;
+    margin-top:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    clear: both;
+    cursor: pointer;
+}
+
+@media (min-width: 1571px) {
+    .note {
+        width: 24% !important;
+    }
+}
+@media (min-width: 1336px) and (max-width: 1570px) {
+    .note {
+        width: 23% !important;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1336px){
+    .note {
+        width: 30% !important;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 900px){
+    .note {
+        width: 45% !important;
+    }
+}
+.note {
+  width: 95%;
+  margin:10px 7px;
+  text-align: center;
+  padding: 0px;
+  word-wrap:break-word;
+    border-radius: 2px;
+    border-top-right-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+  overflow: hidden;
+}
+@media (min-width: 790px) {
+    .note {
+        -webkit-animation: fadein 1s; /* Chrome, Safari, Opera */
+        animation: fadein 1s;
+        webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+        box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    }
+
+    .note:hover {
+        webkit-box-shadow: -1px 15px 19px 8px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 15px 19px 8px rgba(0,0,0,0.75);
+        box-shadow: -1px 15px 19px 8px rgba(0,0,0,0.75);
+        -webkit-transition: all ease 0.4s;
+        -moz-transition: all ease 0.4s;
+        -o-transition: all ease 0.4s;
+        -ms-transition: all ease 0.4s;
+        transition: all ease 0.4s;
+        z-index: 100;
+    }
+    .note button {
+        opacity: 0.0;
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+    }
+
+    .note:hover button {
+        opacity: 1;
+    }
+}
+
+
+.note img {
+ margin-top: 10px !important;
+    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.80);
+    width: 100%;
+    clear: both;
+}
+
+
+.note:hover .deletenote {
+    opacity: 0.8 !important;
+}
+
+.note p a {
+    color: white;
+}
+#notedescription:focus {
+  height:100px;
+-webkit-transition: all ease 0.3s;
+-moz-transition: all ease 0.3s;
+-o-transition: all ease 0.3s;
+-ms-transition: all ease 0.3s;
+transition: all ease 0.3s;
+}
+#notedescription {
+width: 90%;
+height: 20px;
+overflow: hidden;
+    font-family: Raleway, sans-serif;
+-webkit-transition: all ease 0.3s;
+-moz-transition: all ease 0.3s;
+-o-transition: all ease 0.3s;
+-ms-transition: all ease 0.3s;
+transition: all ease 0.3s;
+}
+
+.submitbutton {
+box-shadow: none;
+background-color: #f8f8f8;
+background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
+border: 1px solid #c6c6c6;
+color: #333; 
+border-radius: 2px;
+cursor: pointer;
+text-align: center;
+min-width: 54px;
+height: 27px;
+padding: 0 8px;
+margin-bottom: 5px;
+}
+
+.accomplish {
+    background: url('../img/check.png') center no-repeat;
+    background-size: 30px 30px;
+width: 30px;
+height: 30px;
+border: none; 
+margin: 0 5px;
+cursor: pointer;
+}
+.editbutton {
+background: url('../img/edit.png') center no-repeat;
+background-size: 25px 25px;
+width: 30px;
+height: 30px;
+border: none;
+margin: 0 5px;
+  cursor: pointer;
+}
+.closebutton {
+background: url('../img/close.png') center no-repeat;
+background-size: 45px 45px;
+width: 30px;
+height: 30px;
+border: none;
+margin: 0 5px;  
+  cursor: pointer;
+}
+.accomplish:hover, .editbutton:hover, .closebutton:hover {
+ opacity: 0.5 !important; 
+ 
+}
+
+.noteimg {
+    width: 100%;
+    cursor: pointer;
+    /*max-height: 80%; */
+
+}
+
+#private {
+    background: url('../img/unlock.png') center no-repeat;
+    background-size: 20px 20px !important;
+    height: 30px;
+    width: 30px;
+    border: none;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+    opacity: 0.7;
+}
+
+.privatenote {
+    display: block;
+    background: url('../img/lock.png') center no-repeat;
+    background-size: 20px 20px !important;
+    height: 30px;
+    width: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.note p {
+    margin-bottom: 0px;
+    clear: both;
+    cursor: pointer;
+}
+
+#boostno, #noteboostnum {
+    margin-right: 20px;
+    margin-bottom: 5px;
+    float: right;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top:10px;
+}
+
+.boost {
+    background: url('../img/whiteheart.png') center no-repeat;
+    background-size: 15px 15px;
+    width: 33px;
+    height: 33px;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    float:right;
+}
+.boost:hover {
+    opacity: 0.7;
+}
+
+.displaytags {
+    margin-left: 20px;
+    margin-bottom: 5px;
+    float: left;
+    font-weight: bold;
+    font-size: 12px;
+    opacity: 0.5;
+    word-break: break-word;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+#noteprofile {
+    float: left;
+}
+#noteprofile:hover {
+    opacity: 0.8;
+}
+#noteprofile img {
+    width: 25px;
+    height: 25px;
+    border: solid white 2px;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    box-shadow: none !important;
+}
+
+#profileName {
+    float: left;
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.accomplishedNote {
+    float: right;
+}
+
+.accomplishedNote img {
+    width: 25px;
+    height: 25px;
+    box-shadow: none;
+    margin-right: 10px;
+}
+
+.deletenote {
+    background: url('../img/close.png') center no-repeat;
+    background-size: 35px 35px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    float: right;
+    margin-top: 13px;
+    margin-right: 10px;
+}
+
+.deletenote:hover {
+    opacity: 0.6 !important;
+}
+
+#noteprofile a {
+    text-decoration:none;
+}

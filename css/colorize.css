@@ -1,0 +1,150 @@
+.note:nth-child(19n+1){
+    background: #e51c23;
+}
+
+.note:nth-child(19n+2){
+    background: #e91e63;
+}
+
+.note:nth-child(19n+3){
+    background: #9c27b0;
+}
+
+.note:nth-child(19n+4){
+    background: #673ab7;
+}
+
+
+.note:nth-child(19n+5){
+    background: #3f51b5;
+}
+
+.note:nth-child(19n+6){
+    background: #5677fc;
+}
+
+
+.note:nth-child(19n+7){
+    background: #03a9f4;
+}
+
+
+.note:nth-child(19n+8){
+    background: #00bcd4;
+}
+
+.note:nth-child(19n+9){
+    background: #009688;
+}
+
+
+.note:nth-child(19n+10){
+     background: #259b24;
+ }
+
+
+.note:nth-child(19n+11){
+    background: #8bc34a;
+}
+
+
+.note:nth-child(19n+12){
+    background: #cddc39;
+}
+
+.note:nth-child(19n+13){
+    background: #ffeb3b;
+}
+
+
+.note:nth-child(19n+14){
+    background: #ffc107;
+}
+
+
+.note:nth-child(19n+15){
+    background: #ff9800;
+}
+
+.note:nth-child(19n+16){
+    background: #ff5722;
+}
+
+
+.note:nth-child(19n+17){
+    background: #795548;
+}
+
+
+.note:nth-child(19n+18){
+    background: #9e9e9e;
+}
+
+
+.note:nth-child(19n+19){
+    background: #607d8b;
+}
+
+
+@media (min-width: 790px) {
+    .note:nth-child(19n+1):hover{
+        background: #e84e40;
+    }
+    .note:nth-child(19n+2):hover{
+        background: #ec407a;
+    }
+
+    .note:nth-child(19n+3):hover{
+        background: #ab47bc;
+    }
+
+    .note:nth-child(19n+4):hover{
+        background: #7e57c2;
+    }
+    .note:nth-child(19n+5):hover{
+        background: #5c6bc0;
+    }
+    .note:nth-child(19n+6):hover{
+        background: #738ffe;
+    }
+    .note:nth-child(19n+7):hover{
+        background: #29b6f6;
+    }
+    .note:nth-child(19n+8):hover{
+        background: #26c6da;
+    }
+    .note:nth-child(19n+9):hover{
+        background: #26a69a;
+    }
+    .note:nth-child(19n+10):hover{
+        background: #2baf2b;
+    }
+    .note:nth-child(19n+11):hover{
+        background: #9ccc65;
+    }
+    .note:nth-child(19n+12):hover{
+        background: #d4e157;
+    }
+    .note:nth-child(19n+13):hover{
+        background: #ffee58;
+    }
+    .note:nth-child(19n+14):hover{
+        background: #ffca28;
+    }
+    .note:nth-child(19n+15):hover{
+        background: #ffa726;
+    }
+    .note:nth-child(19n+16):hover{
+        background: #ff7043;
+    }
+    .note:nth-child(19n+17):hover{
+        background: #8d6e63;
+    }
+    .note:nth-child(19n+18):hover{
+        background: #bdbdbd;
+    }
+    .note:nth-child(19n+19):hover{
+        background: #78909c;
+    }
+
+}

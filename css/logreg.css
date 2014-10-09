@@ -1,0 +1,175 @@
+body {
+    background: url('http://whatangiemade.com/wp-content/uploads/2014/09/wg_blurred_backgrounds_151.jpg') no-repeat center fixed;
+    background-size: 100% 100%;
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0px 0px;
+    font-family: Raleway, sans-serif;
+}
+
+@media (min-width: 790px){
+    body {
+
+    }
+}
+.middiv{
+    display: table-cell;
+    vertical-align: middle;
+}
+.logreg {
+    text-align: center;
+    color: white;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.8);
+    margin: auto auto;
+    padding: 30px;
+    overflow: hidden;
+    -webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    border-radius: 5px;
+}
+@media (min-width: 790px) {
+    .logreg {
+        width: 50% !important;
+    }
+    .logreg h1, .logreg p, #or {
+        display: block !important;
+    }
+}
+
+input {
+    height: 2em;
+    width: 25%;
+    min-width: 200px;
+    margin: 2px;
+
+}
+
+.login {
+    background: #28871a;
+}
+
+.btnSubmit {
+    background: #6f86ff !important;
+    color: #ffffff;
+}
+
+.regenter {
+    background: #28871a !important;
+}
+
+.register {
+    background: #d03e07 !important;
+    color: #ffffff;
+}
+
+
+#profile, #share {
+    text-align: center;
+    color: white;
+    width: 50%;
+    /* height: 50%; */
+    background: rgba(0, 0, 0, 0.6);
+    margin: auto auto;
+    padding: 30px;
+    overflow: hidden;
+    -webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    min-width: 406px;
+}
+/* colorize input bars to indicate validity for registration
+------------------------------------------------------------------
+   username and email will be green if available
+   passwords will be green if matching and meets length requirements */
+
+.inputRed {border: 4px solid #c00;}
+.inputGreen {border: 4px solid #0c0;}
+.inputGray {border: 4px solid #aaa;}
+
+/* Apply these styles only when #preview-pane has
+       been placed within the Jcrop widget */
+.jcrop-holder #preview-pane {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    top: 10px;
+    right: -100px;
+    padding: 6px;
+    border: 1px rgba(0,0,0,.4) solid;
+    background-color: white;
+
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+    -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* The Javascript code will set the aspect ratio of the crop
+   area based on the size of the thumbnail preview,
+   specified here */
+#preview-pane .preview-container {
+    width: 100px;
+    height:100px;
+    overflow: hidden;
+}
+
+.jcrop-holder img {
+    border: solid 5px !important;
+    border-radius: 5px;
+}
+
+.jcrop-holder {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#target {
+    border: solid 5px !important;
+    border-radius: 5px;
+    margin: 30px 0px;
+   /* height: 300px; */
+}
+
+.raisedbutton {
+    background: #6f86ff;
+    color: #ffffff;
+    margin: 1em;
+    width: 10em;
+    border: 0;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 13;
+    display: inline-block;
+}
+
+.raisedbutton:hover {
+    box-shadow: 0 2px 10px 4px rgba(0, 0, 0, 0.16);
+}
+
+.raisedbutton span{
+    display: inline-block;
+    margin: 0.5em;
+}
+
+.errormessage {
+    border: solid #FF0000;
+    background-color: #FF6E6E;
+    padding: 3px;
+    text-align: center;
+    margin: 10px auto;
+    width: inherit;
+}

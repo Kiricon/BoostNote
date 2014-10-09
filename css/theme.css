@@ -1,0 +1,387 @@
+@-webkit-keyframes rotate {
+     from {
+         -webkit-transform: rotate(0deg);
+     }
+     to {
+         -webkit-transform: rotate(360deg);
+     }
+ }
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.hexigon {
+    opacity: 0.3;
+    -webkit-animation: rotate 5s infinite;
+    animation: rotate 5s infinite;
+    margin-left: auto;
+    margin-right: auto;
+}
+#notesubmit {
+    background: #6f86ff;
+    color: #ffffff;
+    float: right;
+    margin-top: 0px !important;
+}
+
+#updatesubmit {
+    background: #ff9d00;
+    color: #ffffff;
+    float: right;
+    margin-top: 0px !important;
+}
+
+#accomplishsubmit {
+    background: #28871a;
+    color: #ffffff;
+    float: right;
+    margin-top: 0px !important;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+  background: #d8d8d8;
+  background-size:100% 100%;
+  margin: 0 0 !important;
+  padding: 0px 0px !important;
+  font: 12px/1.5 Helvetica,Arial,Verdana,sans-serif;
+    transition: opacity ease-in 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+}
+.header {
+    left: 0px;
+    position: absolute;
+    opacity: 0.98;
+    z-index: 1;
+    color: #d3d3d3;
+    height: auto;
+   background-color: #202020;
+ width: 100%;
+ -webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+}
+
+#maincontent {
+    margin-top: 150px;
+    display: inherit;
+}
+
+@media (min-width: 790px) {
+    .header {
+        position: fixed;
+    }
+    #maincontent {
+        margin-top: 108px !important;
+    }
+}
+.status {
+ float: left;
+ margin-left: 10px;
+ height: 57px;
+}
+@media (max-width: 790px){
+    .status {
+    margin-left: inherit !important;
+}
+}
+.logreg {
+float:right;
+margin-right: 5px;
+}
+.makenote {
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+width: 90%; 
+background-color: rgb(255, 255, 255);
+-webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+border-radius:2px;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
+    -ms-transition: all ease 0.2s;
+    transition: all ease 0.2s;
+}
+@media (min-width: 790px) {
+    .makenote:hover {
+        -webkit-box-shadow: -1px 10px 19px 4px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 10px 19px 4px rgba(0,0,0,0.75);
+        box-shadow: -1px 10px 19px 4px rgba(0,0,0,0.75);
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.2s;
+        -o-transition: all ease 0.2s;
+        -ms-transition: all ease 0.2s;
+        transition: all ease 0.2s;
+    }
+}
+
+
+@media (min-width: 500px) {
+  .makenote {
+  width: 454px;
+  margin-top: 40px;
+  }
+}
+
+.makenote input, .makenote textarea {
+font-family: 'Roboto Slab','Times New Roman',serif;
+color: rgba(0,0,0,0.8);
+border: none;
+margin: 5px 10px;
+padding-left: 5px;
+}
+.makenote textarea {
+font-size: 15px; 
+}
+.registerform {
+display:none; 
+}
+#titleinput {
+ width: 90%; 
+ height: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Raleway, sans-serif;
+}
+.submitbutton {
+ float: right;
+ margin-right: 10px;
+}
+.heart {
+    height:40px;
+    width:40px;
+    margin-top: 5px;
+}
+
+footer {
+ clear: both; 
+}
+.errormessage {
+ border: solid #FF0000;
+background-color: #FF6E6E;
+padding-left: 10px;
+padding-right: 10px;
+text-align: center;
+font-size: 20px; 
+}
+.successmessage {
+border: solid #45A345;
+background-color: #6CFF66;
+width: 100%;
+text-align: center;
+font-size: 20px; 
+}
+.profileimg {
+float:left; 
+margin-right: 10px; 
+border: solid white;
+}
+.userinfo {
+ float:left; 
+}
+
+.boosted {
+    background: url('https://furm.co.nz/wp-content/uploads/2013/04/up-arrow-icon.png') center no-repeat;
+    background-size: 30px 30px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    margin: 0 5px;
+    cursor: default;
+    opacity: 0.4 !important;
+}
+
+.imageupload {
+    background: url('../img/cameraicon.png') center no-repeat;
+    background-size: 25px 25px;
+    height: 35px;
+    width: 30px;
+    border: none;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+    opacity: 0.6;
+    padding-top: 5px;
+}
+.inputFile {
+    opacity: 0;
+    cursor: pointer;
+    width: inherit;
+    margin: 0 0 !important;
+    height: 40px;
+    width: inherit !important;
+}
+
+.resultImage {
+    width: 95%;
+    margin: 10px;
+}
+
+#killimage {
+    background: url('../img/close.png') no-repeat center;
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#killimage:hover {
+    opacity: 0.7;
+}
+.uploading {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-left: 175px;
+    margin-top: 100px;
+    background: url('../img/hexagone.png') center no-repeat;
+    background-size: 100px;
+    opacity: 0.7;
+    -webkit-animation: rotate 5s infinite;
+    animation: rotate 5s infinite;
+}
+
+#tagsymbol {
+    background: url('../img/tag.png') no-repeat center;
+    background-size: 15px 15px;
+    height: 25px;
+    width: 25px;
+    float: left;
+    opacity: 0.5;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+#singleFieldTags {
+    margin-top: 0px !important;
+    border:none !important;
+}
+
+#mySingleField {
+    font-weight: normal !important;
+    font: 12px/1.5 Helvetica,Arial,Verdana,sans-serif !important;
+}
+
+#searchcontainter {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search {
+    float: right;
+    margin-right: 50px;
+}
+
+#search input {
+    background-size: 15px 15px;
+    padding-left: 23px;
+    background: none;
+    border: none !important;
+    margin: 0px 0px !important;
+    font-size: 17px;
+    outline: 0;
+    outline-style: none;
+    outline-width: 0;
+    background-color: white;
+    border-radius: 28px;
+    padding: 5px;
+    padding-left: 25px
+}
+
+#search select {
+    margin-right: 20px;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: .2em;
+    font-family: Arial, Helvetica;
+    border:none;
+}
+
+.profilepicture {
+    height: 53px;
+    width: 53px;
+    border: solid 2px;
+    border-radius: 2px;
+    float: left;
+}
+
+.profilepicture:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#username {
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+#setWallpaper {
+    float:right;
+    margin-right: 20px;
+}
+
+.raisedbutton {
+    background: #6f86ff;
+    color: #ffffff;
+    margin: 1em;
+    width: 10em;
+    border: 0;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+
+
+.raisedbutton:hover {
+    box-shadow: 0 2px 10px 4px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
+    -ms-transition: all ease 0.2s;
+    transition: all ease 0.2s;
+}
+
+.raisedbutton span{
+    display: inline-block;
+    margin: 0.5em;
+}
+
+.supnum {
+    margin-left: 10px;
+}
+.status p {
+    margin-top: 5px !important;
+}
+
+#onlysupport {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.wallpaperbtn {
+    width: inherit !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0px;
+}
