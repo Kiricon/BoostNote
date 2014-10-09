@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+<head>
+    <link rel="shortcut icon" href="img/heart.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/logreg.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://dev.boostnote.net/js/jquery.Jcrop.min.js"></script>
+    <link rel="stylesheet" href="http://dev.boostnote.net/css/jquery.Jcrop.min.css" type="text/css" />
+</head>
+<body>
+<header>
+</header>
+<!-- MAIN CONTENT -->
+<div class="middiv">
+    <div class="logreg">
+                <h1 style="display:none;">Welcome to BoostNote!</h1>
+        <p style="display:none;">BoostNote is a social network and utility for everyone from you're common blogger to business professionals. Write down you're important notes or share what you're up to with your friends!
+            Let the world know how you achieve!
+        </p>
+        <div class="loginform" id="logform">
+            <form id="loginForm">
+                <input id="uname" type="text" name="uname" placeholder="Username">
+                <input id="pword" type="password" name="pword" placeholder="Password"><br>
+                <input type="submit" style="display:none"/>
+                <div class="login raisedbutton" id="login"><span>Login</span></div> <div class="register raisedbutton" id="showreg"><span>Register</span></div>
+            </form>
+
+        </div>
+        <div class="registerform" id="regform" style="display:none;">
+            <form id="registerForm" autocomplete="off">
+                <input type="text" id="email" placeholder="Email">
+                <input type="text" id="runame" placeholder="New Username"><br/>
+                <input type="password" id="rpword" placeholder="New Password">
+                <input type="password" id="rpword2" placeholder="Re-type New Password"><br/>
+                <div class="login raisedbutton" id="showlogin"><span>Login</span></div> or <div class="register raisedbutton" id="register"><span>Register</span></div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- FOOTER -->
+<footer>
+    <span style="color: white; position:absolute; bottom:0; right:0; margin-right: 10px; margin-bottom: 10px;">By: Dominic Valenciana</span>
+    <script type="text/javascript" src="js/api.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</footer>
+</body>
+</html>
