@@ -21,7 +21,7 @@
     background-color: #202020;
     clear: both;
     -webkit-backface-visibility:hidden;
-    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 19px -19px rgba(0,0,0,0.75);
 }
 .navigation div {
     top:0;
@@ -99,12 +99,7 @@
     text-align: left;
     display: inline;
     margin: 0;
-   /*padding: 15px 4px 17px 0;*/
-   /* margin-right: 15px; */
     list-style: none;
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 #dropdown li, #dropdown ul li {
     font: bold 12px/18px sans-serif;

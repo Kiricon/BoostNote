@@ -644,6 +644,7 @@ function addNote() {
     //sanitizing inputs from XSS
     $note->title = htmlspecialchars($note->title, ENT_QUOTES, 'UTF-8');
     $note->description = htmlspecialchars($note->description, ENT_QUOTES, 'UTF-8');
+    $note->description = nl2br($note->description);
 
     //really??! did they circumvent the warnings?
     //fill empty titles i guess!!!

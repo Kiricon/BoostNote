@@ -481,7 +481,8 @@ function renderNotes(data) {
                 history.replaceState(null, null, '/');
             },
             type: 'ajax',
-            href: linklocation
+            href: linklocation,
+            padding: 8
 
         }) ;
         window.history.replaceState(null, null, 'note/'+$(this).parent().attr('id'));
@@ -544,7 +545,8 @@ function renderAllNotes(data) {
                 history.replaceState(null, null, '/');
             },
             type: 'ajax',
-            href: linklocation
+            href: linklocation,
+            padding: 8
 
         }) ;
         window.history.replaceState(null, null, 'note/'+$(this).parent().attr('id'));
@@ -639,7 +641,8 @@ function renderAccomplishedNotes(data) {
                 history.replaceState(null, null, '/');
             },
             type: 'ajax',
-            href: linklocation
+            href: linklocation,
+            padding: 8
 
         }) ;
         window.history.replaceState(null, null, 'note/'+$(this).parent().attr('id'));
