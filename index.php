@@ -67,6 +67,7 @@ $app->get('/note/:notid', 'getNoteInfo');
 $app->get('/looknote/:notid/:notecolor', 'lookNote');
 $app->get('/:username', 'userProfile');
 $app->get('/support/:userid', 'supportCount');
+$app->get('/notecount/:userid', 'noteCount');
 $app->get('/prof/:userid/:loadnum', 'getAllProfileNotes');
 $app->post('/api/Register', 'Register');
 $app->post('/api', 'addNote');
@@ -192,13 +193,13 @@ function userProfile($username){
         $stmt->execute();
         $account = $stmt->fetchObject();
         $db = null;
-        echo "<div id='profile' class='".$account->id."'><img src='../".$account->profile."' /></div>";
+        echo "<div id='profile' class='".$account->id."'><img src='../".$account->profile."' /><div style='float:left;' id='profilestats'></div></div>";
         echo '<div id="hexload" style="width: 100px; margin-left: auto; margin-right:auto;"><img class="hexigon" src="img/hexagone.png" style="margin: 10px auto; width: 100px;"><br/><h2>Loading...</h2></div>';
         echo "<div class='notes' style='opacity: 0;'></div>";
         echo "<style>body{background: url('../".$account->wallpaper."') fixed; background-size: 100% 100%; background-color: #d8d8d8;}</style>";
-        echo "<script>$('.header').append('<div class=usertitle>".$account->username."</div>'); document.title='".$account->username."'; $('#favicon').attr('href', '".$account->profile."'); $('#support span').addClass('".$account->id."'); getProfileNotes(".$account->id.",0); getSupportNum(".$account->id.")</script>";
+        echo "<script>$('.header').append('<div class=usertitle>".$account->username."</div>'); document.title='".$account->username."'; $('#favicon').attr('href', '".$account->profile."'); $('#support span').addClass('".$account->id."'); getProfileNotes(".$account->id.",0); getSupportNum(".$account->id."); getNoteNum(".$account->id.");</script>";
         if($account->supporter){
-            echo "<script>$('#support').unbind('click');$('#support span').text('Unsupport'); $('#support').attr('id','unsupport'); $('#unsupport').bind('click', unclick);</script>";
+            echo "<script>$('#support').unbind('click');$('#support span').text('- Remove'); $('#support').attr('id','unsupport'); $('#unsupport').bind('click', unclick);</script>";
         }
     } catch(PDOException $e) {
         echo '{"error":{"text":'. $e->getMessage() .'}}';
@@ -220,6 +221,19 @@ function getAllProfileNotes($userid, $loadnum) {
 
 function supportCount($userid) {
     $sql = "SELECT COUNT(supported) FROM Support WHERE supported=".$userid."";
+    try {
+        $db = getConnection();
+        $stmt = $db->query($sql);
+        $num = $stmt->fetchColumn();
+        $db = null;
+        echo $num;
+    } catch(PDOException $e) {
+        echo '{"error":{"text":'. $e->getMessage() .'}}';
+    }
+}
+
+function noteCount($userid) {
+    $sql = "SELECT COUNT(user_id) FROM Notes WHERE user_id=".$userid."";
     try {
         $db = getConnection();
         $stmt = $db->query($sql);

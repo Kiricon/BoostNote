@@ -9,6 +9,11 @@ function StartUp(){
     $("#notedescription").on("focus", (function(){
         $(this).css("height", "100px");
     }));
+    $("#notedescription").focusout(function(){
+        if($(this).val() == "" || $(this).val() == null){
+            $(this).css('height', "20");
+        }
+    });
 
     $(document).scroll(function() {
         if ($(this).scrollTop() > 57 && $(window).width() <= 790) {
@@ -106,7 +111,7 @@ function StartUp(){
                     findAllNotes(0);
                        $(window).unbind('.myScroll');
                        $(window).bind('scroll.myScroll',function() {
-                           if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexload').length) {
+                           if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexloader').length) {
                                $('.notes').after('<div id="hexloader" style="width: 100px; margin-left: auto; margin-right:auto;"><img class="hexigon" src="img/hexagone.png" style="margin: 10px auto; width: 100px;"><br/><h2>Loading...</h2></div>');
                                findAllNotes(loadspot);
                                loadspot += 25;
@@ -122,7 +127,7 @@ function StartUp(){
                        searchTopNotes(inputsearch, 0);
                        $(window).unbind('.myScroll');
                        $(window).bind('scroll.myScroll',function() {
-                           if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexload').length) {
+                           if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexloader').length) {
                                $('.notes').after('<div id="hexloader" style="width: 100px; margin-left: auto; margin-right:auto;"><img class="hexigon" src="img/hexagone.png" style="margin: 10px auto; width: 100px;"><br/><h2>Loading...</h2></div>');
                                findTopNotes(inputsearch, loadspot);
                                loadspot += 25;
@@ -135,7 +140,7 @@ function StartUp(){
                    findTopNotes(0);
                        $(window).unbind('.myScroll');
                        $(window).bind('scroll.myScroll',function() {
-                           if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexload').length) {
+                           if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexloader').length) {
                                $('.notes').after('<div id="hexloader" style="width: 100px; margin-left: auto; margin-right:auto;"><img class="hexigon" src="img/hexagone.png" style="margin: 10px auto; width: 100px;"><br/><h2>Loading...</h2></div>');
                                findTopNotes(loadspot);
                                loadspot += 25;
@@ -154,7 +159,7 @@ function StartUp(){
                     searchNotes(inputsearch, 0);
                     $(window).unbind('.myScroll');
                     $(window).bind('scroll.myScroll',function() {
-                        if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexload').length) {
+                        if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexloader').length) {
                             $('.notes').after('<div id="hexloader" style="width: 100px; margin-left: auto; margin-right:auto;"><img class="hexigon" src="img/hexagone.png" style="margin: 10px auto; width: 100px;"><br/><h2>Loading...</h2></div>');
                             searchNotes(inputsearch, loadnum);
                             loadspot += 25;
@@ -167,7 +172,7 @@ function StartUp(){
                     searchTopNotes(inputsearch, 0);
                     $(window).unbind('.myScroll');
                     $(window).bind('scroll.myScroll',function() {
-                        if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexload').length) {
+                        if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexloader').length) {
                             $('.notes').after('<div id="hexloader" style="width: 100px; margin-left: auto; margin-right:auto;"><img class="hexigon" src="img/hexagone.png" style="margin: 10px auto; width: 100px;"><br/><h2>Loading...</h2></div>');
                             findTopNotes(inputsearch, loadspot);
                             loadspot += 25;
@@ -178,7 +183,7 @@ function StartUp(){
             });
             var loadspot = 25;
             $(window).bind('scroll.myScroll',function() {
-                if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexload').length) {
+                if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexloader').length) {
                     $('.notes').after('<div id="hexloader" style="width: 100px; margin-left: auto; margin-right:auto;"><img class="hexigon" src="img/hexagone.png" style="margin: 10px auto; width: 100px;"><br/><h2>Loading...</h2></div>');
                     findAllNotes(loadspot);
                     loadspot += 25;
@@ -202,7 +207,7 @@ function StartUp(){
             $(document).scrollTop(0);
             emptyNote();
             $('.notes').empty();
-            $('.makenote').after('<div id="hexloader" style="width: 100px; margin-left: auto; margin-right:auto;"><img class="hexigon" src="img/hexagone.png" style="margin: 10px auto; width: 100px;"><br/><h2>Loading...</h2></div>');
+            $('.makenote').after('<div id="hexloader" style="width: 100px; margin-left: auto; margin-right:auto; margin-top: 30px;"><img class="hexigon" src="img/hexagone.png" style="margin: 10px auto; width: 100px;"><br/><h2>Loading...</h2></div>');
             $('.notes').css("opacity", "0");
             findMyNotes();
             $('.makenote').show();
@@ -238,7 +243,7 @@ function StartUp(){
         $(window).unbind('.myScroll');
         var loadspot = 25;
         $(window).bind('scroll.myScroll',function() {
-            if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexload').length) {
+            if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexloader').length) {
                 $('.notes').after('<div id="hexloader" style="width: 100px; margin-left: auto; margin-right:auto;"><img class="hexigon" src="img/hexagone.png" style="margin: 10px auto; width: 100px;"><br/><h2>Loading...</h2></div>');
                 findSupportedNotes(loadspot);
                 loadspot += 25;

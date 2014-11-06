@@ -58,8 +58,8 @@ transition: all ease 0.3s;
 .notetitle {
     font-family: Raleway, sans-serif;
     text-align:center;
-    font-size: 1.5em;
-    font-weight:bold;
+    font-size: 1.3em;
+    /*font-weight:bold; */
     margin-top:10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -87,6 +87,7 @@ transition: all ease 0.3s;
 @media (min-width: 500px) and (max-width: 900px){
     .note {
         width: 45% !important;
+        margin: 10px 10px !important;
     }
 }
 .note {
@@ -280,7 +281,7 @@ margin: 0 5px;
 }
 
 .displaytags {
-    margin-left: 20px;
+    margin-left: 15px;
     margin-bottom: 5px;
     float: left;
     font-weight: bold;
@@ -289,6 +290,11 @@ margin: 0 5px;
     word-break: break-word;
     margin-right: 5px;
     margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 67%;
+    text-align: left;
 }
 
 #noteprofile {

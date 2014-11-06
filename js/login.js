@@ -1,6 +1,8 @@
 /**
  * Created by ergo on 6/25/14.
  */
+
+
 $('#mailme').click(function (){
    sendEmail();
 });
@@ -29,6 +31,7 @@ $("#loginForm").submit(function(){
     var uname = $('#uname').val();
     var pword = $('#pword').val();
     Login(uname, pword);
+    $('#login').addClass('colorchange');
     return false;
 });
 
@@ -216,25 +219,6 @@ function setProfile(){
                 reader.readAsDataURL(input.files[0]);
             }
         }
-
-        /*
-        $("#uploadForm").on('submit',(function(e){
-            e.preventDefault();
-            $.ajax({
-                url: "http://dev.boostnote.net/api/upload",
-                type: "POST",
-                data:  new FormData(this),
-                contentType: false,
-                cache: false,
-                processData:false,
-                success: function(data){
-                    alert(data);
-                },
-                error: function(){
-                    alert("File didn't upload");
-                }
-            });
-        }));  */
     });
 
     function jcropMake(){

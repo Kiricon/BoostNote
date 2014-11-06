@@ -17,10 +17,12 @@
 
 .header {
     opacity: 0.98;
-    position: fixed;
     z-index: 1;
     color: #d3d3d3;
-    height: 58px;
+    height: 57px;
+    position: fixed;
+    top: 0px;
+    float:left;
     /* overflow: hidden; */
     /* background-color: rgb(255, 201, 78); */
     background-color: #202020 /*#282c35*/;
@@ -29,6 +31,7 @@
     -moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
     box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
 }
+
 
 body {
     position: absolute;
@@ -94,15 +97,23 @@ body {
     margin-bottom: 20px;
     border: solid white 5px;
     border-radius: 5px;
-    webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
-    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    webkit-box-shadow: -1px 4px 8px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 8px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 8px 1px rgba(0,0,0,0.75);
     width: 100px;
     height: 100px;
 }
 
 #profile .supnum {
-    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-right: 20px;
+}
+
+#profile .notenum {
     margin-top: 20px;
     margin-left: 20px;
     font-size: 18px;
@@ -116,7 +127,9 @@ body {
      clear: both;
      float: right;
      margin-top: 100px;
-     margin-right: 50px
+     margin-right: 50px;
+    width: initial;
+    padding: 0px 20px;
  }
 
 #unsupport {

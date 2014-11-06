@@ -1,3 +1,15 @@
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadein {
+    from {opacity: 0.0;}
+    to {opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes fadein {
+    from {opacity: 0.0;}
+    to {opacity: 1;}
+}
+
 @keyframes settings-slide {
     0% {padding:0px 0px 0px 200px; opacity: 0;}
     100% {padding:0px 0px 0px 0px; opacity: 1;}
@@ -31,7 +43,7 @@
 
 @media (min-width: 790px){
     #settingsSection, #aboutSection {
-        width: 50%;
+        width: 60%;
         -webkit-transition: all ease 0.3s;
         -moz-transition: all ease 0.3s;
         -o-transition: all ease 0.3s;
@@ -75,7 +87,7 @@
     margin-top: 30px;
     font-size: 30px;
     color: #464646;
-    /*text-shadow: 3px 3px 3px rgba(0,0,0,0.75); */
+    text-shadow: 0 -1px 0 #000;
 }
 
 #profileEmail {
@@ -159,8 +171,8 @@
     width: 30%;
 }
 
-.inputRed {border: 4px solid #c00;}
-.inputGreen {border: 4px solid #0c0;}
+.inputRed {border: 4px solid #cc4c48;}
+.inputGreen {border: 4px solid #4A884A;}
 .inputGray {border: 4px solid #aaa;}
 
 #profile {
@@ -292,4 +304,30 @@
     #updateWallpaper div {
         margin-top: 20px;
     }
+}
+
+#passwordUpdated {
+    width: 95%;
+    background: #7DC381;
+    margin: 4px auto;
+    padding: 3px;
+    border: solid #06A632;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-animation: fadein 1s; /* Chrome, Safari, Opera */
+    animation: fadein 1s;
+}
+
+#passwordUpdatedError {
+    width: 95%;
+    background: #c3645f;
+    margin: 4px auto;
+    padding: 3px;
+    border: solid #a62828;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-animation: fadein 1s; /* Chrome, Safari, Opera */
+    animation: fadein 1s;
 }

@@ -54,7 +54,13 @@ function findMyNotes() {
         type: 'GET',
         url: rootURL +'/my',
         dataType: "json", // data type of response
-        success: renderNotes
+        success: function (data, textStatus, jqXHR){
+            renderNotes(data)
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            alert('You have been logged out');
+            location.reload();
+        }
     });
 }
 
@@ -66,6 +72,10 @@ function findAllNotes(loadnum) {
         dataType: "json", // data type of response
         success: function(data, textStatus, jgXHR) {
             renderAllNotes(data);
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            alert('You have been logged out');
+            location.reload();
         }
     });
 }
@@ -78,7 +88,13 @@ function findSupportedNotes(loadnum) {
         dataType: "json", // data type of response
         success: function(data, textStatus, jgXHR) {
             renderAllNotes(data);
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            alert('You have been logged out');
+            location.reload();
         }
+
+
     });
 }
 
@@ -88,7 +104,13 @@ function findAccomplished() {
         type: 'GET',
         url: rootURL +'/accomplished',
         dataType: "json", // data type of response
-        success: renderAccomplishedNotes
+        success: function(data, textStatus, jgXHR){
+            renderAccomplishedNotes(data);
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            alert('You have been logged out');
+            location.reload();
+        }
     });
 }
 
@@ -159,7 +181,11 @@ function Login(username, password) {
             }
             else{
                 console.log(data.username);
-                alert('Invalid Login credentials');
+                $('.logreg').prepend('<div class="errormessage">Incorrect Login Credentials<img id="closeerror" src="../img/redminus.png" style="float:right; height: 20px; width: 20px; cursor: pointer;" /></div>');
+                $('#closeerror').click(function (){
+                    $(this).parent().remove();
+                });
+                $('#login').removeClass('colorchange');
             }
         }
     });
@@ -456,9 +482,9 @@ function updatePassword(passwords) {
         success: function(data, textStatus, jqXHR){
         if(data == "true"){
             $('.inputPassword').remove();
-            alert('password has been update');
+            $('#settingsSection').prepend('<div id="passwordUpdated">Password Updated!</div>');
         }else {
-            alert('incorrect Password');
+            $('#settingsSection').prepend('<div id="passwordUpdatedError">Incorrect Information</div>');
             $('#opword').val("");
             $('#newpword').val("");
         }

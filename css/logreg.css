@@ -1,3 +1,21 @@
+@keyframes colorchange {
+    0%   {background: #6f86ff;}
+    20%  {background: #673ab7;}
+    40%  {background: #e51c23;}
+    60% {background: #ff7043;}
+    80% {background: #ffca28;}
+    100% {background: #6f86ff;}
+}
+
+@-webkit-keyframes colorchange {
+    0%   {background: #6f86ff;}
+    20%  {background: #673ab7;}
+    40%  {background: #e51c23;}
+    60% {background: #ff7043;}
+    80% {background: #ffca28;}
+    100% {background: #6f86ff;}
+}
+
 body {
     background: url('../img/blurrpaper.jpg') no-repeat center fixed;
     background-size: 100% 100%;
@@ -26,9 +44,9 @@ body {
     margin: auto auto;
     padding: 30px;
     overflow: hidden;
-    -webkit-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
-    box-shadow: -1px 4px 19px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 4px 10px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 10px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 10px 1px rgba(0,0,0,0.75); 
     border-radius: 5px;
 }
 @media (min-width: 790px) {
@@ -44,8 +62,10 @@ input {
     height: 2em;
     width: 25%;
     min-width: 200px;
-    margin: 2px;
-
+    margin: 5px;
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
 }
 
 .login {
@@ -149,7 +169,7 @@ input {
     text-transform: uppercase;
     border-radius: 3px;
     cursor: pointer;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.8);
     text-align: center;
     font-family: sans-serif;
     font-size: 13;
@@ -172,4 +192,9 @@ input {
     text-align: center;
     margin: 10px auto;
     width: inherit;
+}
+
+.colorchange {
+    -webkit-animation: colorchange 5s infinite; /* Chrome, Safari, Opera */
+    animation: colorchange 5s infinite; /* Standard syntax */
 }

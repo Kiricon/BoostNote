@@ -1,6 +1,8 @@
 /**
  * Created by ergo on 9/1/14.
  */
+
+
 var loadspot = 25;
 $(window).bind('scroll.myScroll',function() {
     if($(window).scrollTop() + $(window).height() == $(document).height() && !$('#hexload').length) {
@@ -11,7 +13,7 @@ $(window).bind('scroll.myScroll',function() {
     }
 });
 var unclick = function(){
-    $(this).children('span').text('Support');
+    $(this).children('span').text('+ Add');
     $(this).attr('id','support');
     $(this).unbind('click');
     $(this).bind('click', click);
@@ -19,7 +21,7 @@ var unclick = function(){
     unsupport(accid);
 }
 var click = function(){
-    $(this).children('span').text('Unsupport');
+    $(this).children('span').text('- Remove');
     $(this).attr('id','unsupport');
     var accid = $(this).children('span').attr('class');
     $(this).unbind('click');
@@ -73,7 +75,18 @@ function getSupportNum(userid) {
         url: 'http://dev.boostnote.net/support/'+userid,
         dataType: "text", // data type of response
         success: function(data, textStatus, jgXHR) {
-            $('#profile').append('<span class="supnum">Supporters: '+data+'</span>');
+            $('#profilestats').append('<div class="supnum">Supporters: '+data+'</div>');
+        }
+    });
+}
+
+function getNoteNum(userid) {
+    $.ajax({
+        type: 'GET',
+        url: 'http://dev.boostnote.net/notecount/'+userid,
+        dataType: "text", // data type of response
+        success: function(data, textStatus, jgXHR) {
+            $('#profilestats').append('<div class="notenum">Notes: '+data+'</div>');
         }
     });
 }

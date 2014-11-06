@@ -7,6 +7,14 @@
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
+          <excludedPaths>
+            <excludedPath path="/uploads" />
+            <excludedPath path="/PHPMailer" />
+            <excludedPath path="/Facebook" />
+            <excludedPath path="/backup" />
+            <excludedPath path="/Slim" />
+            <excludedPath local="true" path="$PROJECT_DIR$/backup" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>
